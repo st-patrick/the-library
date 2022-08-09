@@ -29,10 +29,34 @@
         <button class="border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="offcanvas offcanvas-start border-0 shadow-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+             style="backdrop-filter: blur(6px) invert(1); background-color: #ffffff00;">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><span class="h1" style='color: pink;'>Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="h1" style='color: pink;'>Link</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="h1" style='color: pink;'>Poems</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="h1" style='color: pink;'>Dall-E</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </nav>
 
-<div class="myeffect" style="
+
+<div class="myeffect d-none d-md-block" style="
     position: fixed;
     width: 200px;
     height: 200px;
@@ -43,7 +67,7 @@
     backdrop-filter: brightness(0.7) saturate(4) blur(13px) hue-rotate(25deg);
 ">  <br> </div>
 
-<div class="myeffect" style="
+<div class="myeffect d-none d-md-block" style="
     position: fixed;
     width: 200px;
     height: 200px;
@@ -52,30 +76,6 @@
     background: black;
     mix-blend-mode: overlay;
 ">  <br> </div>
-
-<div class="offcanvas offcanvas-start border-0 shadow-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
-     style="backdrop-filter: blur(6px) invert(1); background-color: #ffffff00;">
-    <div class="offcanvas-header">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><span class="h1" style='color: pink;'>Home</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="h1" style='color: pink;'>Link</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="h1" style='color: pink;'>Poems</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="h1" style='color: pink;'>Dall-E</span></a>
-            </li>
-        </ul>
-    </div>
-</div>
-
 
 <div class="signature">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -110,7 +110,7 @@
     </svg>
 </div>
 
-<div class="container m-5">
+<div class="container">
     <div class="row">
         <div class="col-12">
              <br>
@@ -121,7 +121,7 @@
         </div>
     </div>
 </div>
-<div class="container m-5">
+<div class="container">
     <div class="row">
         <div class="col-12">
              <br>
