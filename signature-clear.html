@@ -13,12 +13,45 @@
         }
 
         .offcanvas-backdrop.show {
-            backdrop-filter: blur(3px);
+            backdrop-filter: blur(4px);
             background-color: #ffffff11;
         }
 
         .offcanvas-backdrop.fade {
             background-color: #ffffff00;
+        }
+
+        .signature-container {
+            height: 100vh;
+            width: 100vw;
+            padding: 10vh 0;
+        }
+
+        .signature {
+            width: 100vw;
+        }
+
+        @media (orientation: portrait) {
+            .signature {
+                display: block;
+                transform-origin: top left;
+                /* Note: for a CLOCKWISE rotation, use the commented-out
+                   transform instead of this one. */
+                /* transform: rotate(-90deg) translate(-100%); */
+                transform: rotate(90deg) translate(0, -100%);
+
+
+                /* Not vital, but possibly a good idea if the element you're rotating contains
+                   text and you want a single long vertical line of text and the pre-rotation
+                   width of your element is small enough that the text wraps: */
+                white-space: nowrap;
+                width: 100vh;
+
+            }
+
+            .signature-container {
+                padding: 0 10vw;
+            }
         }
     </style>
 </head>
@@ -30,7 +63,10 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-start border-0 shadow-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
-             style="backdrop-filter: blur(6px) invert(1); background-color: #ffffff00;">
+             style="
+                backdrop-filter: blur(6px) invert(100%); background-color: #ffffff00;
+                -webkit-backdrop-filter: blur(6px) invert(100%); background-color: #ffffff00;
+             ">
             <div class="offcanvas-header">
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -56,7 +92,7 @@
 </nav>
 
 
-<div class="myeffect d-none d-md-block" style="
+<div class="myeffect d-none d-lg-block" style="
     position: fixed;
     width: 200px;
     height: 200px;
@@ -64,10 +100,11 @@
     left: 500px;
     /* background: black; */
     /* mix-blend-mode: overlay; */
-    backdrop-filter: brightness(0.7) saturate(4) blur(13px) hue-rotate(25deg);
+    backdrop-filter: brightness(70%) saturate(400%) blur(13px) hue-rotate(25deg);
+    -webkit-backdrop-filter: brightness(70%) saturate(400%) blur(13px) hue-rotate(25deg);
 ">  <br> </div>
 
-<div class="myeffect d-none d-md-block" style="
+<div class="myeffect d-none d-lg-block" style="
     position: fixed;
     width: 200px;
     height: 200px;
@@ -77,17 +114,19 @@
     mix-blend-mode: overlay;
 ">  <br> </div>
 
-<div class="signature">
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-         viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
-        <defs>
-          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#00bc9b" />
-              <stop offset="100%" stop-color="#5eaefd" />
-          </linearGradient>
-        </defs>
-        <path style="fill:none;stroke-width:37;stroke-miterlimit:10;" stroke="url(#gradient)" d="M-93.9,802.33
-	c40.71,49.13,109.88,67.63,173.35,61.05c63.47-6.58,122.55-34.8,178.38-65.69c149.16-82.53,285.87-187.51,404.09-310.32
+<div class="signature-container">
+    <div class="signature">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             x="0px" y="0px"
+             viewBox="0 0 2254 761.19" style="enable-background:new 0 0 2254 761.19;" xml:space="preserve">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#00bc9b"/>
+                  <stop offset="100%" stop-color="#5eaefd"/>
+              </linearGradient>
+            </defs>
+            <path style="fill:none;stroke-width:37;stroke-miterlimit:10;" stroke="url(#gradient)" d="M-28.5,651.2
+	c40.71,49.13,152.63,61.87,216.09,55.29s122.55-34.8,178.38-65.69c149.16-82.53,285.87-187.51,404.09-310.32
 	c46.69-48.5,90.94-100.4,121.45-160.41c9.88-19.43,18.43-40.53,17.15-62.29c-3.37-57.58-71.26-88.91-128.94-89.28
 	c-94.41-0.6-185.87,48.68-244.74,122.49s-86.47,169.86-85.39,264.27c0.5,43.14,7.02,87.2,27.51,125.16
 	c42.29,78.37,138.81,116.31,227.59,109.4s170.49-51.32,242.29-104c37.42-27.45,77-69.87,62.15-113.84
@@ -100,15 +139,17 @@
 	c25.88-1.75,52.95,0.98,75.34,14.07c22.39,13.09,38.99,38.24,36.3,64.03c-1.85,17.77-12.13,33.38-22.11,48.19
 	c-39.68,58.89-79.35,117.78-119.03,176.68c100.4,23.02,198.29-42.17,300.1-57.85c10.52-1.62,22.12-2.48,30.97,3.42
 	c14.57,9.71,13.69,31.26,22.24,46.53c18.89,33.73,70.4,22.86,103.32,2.61c82.04-50.47,142.23-129.24,196.86-208.58
-	c26.67-38.74,52.94-78.56,88.37-109.5c69.17-60.39,166.34-80.01,257.99-74.32"/>
-        <g>
+	c26.67-38.74,52.94-78.56,88.37-109.5c69.17-60.39,195.25-74.7,286.9-69.01"/>
             <g>
-                <path d="M981.84-370.25c0.58,0,1.21-0.6,1.59-0.98c0.09-0.09,0.93-1.04,0.49-1.04c-0.58,0-1.21,0.6-1.59,0.98
-                    C982.25-371.21,981.4-370.25,981.84-370.25L981.84-370.25z"/>
+                <g>
+                    <path d="M1089.98-527.14c0.58,0,1.21-0.6,1.59-0.98c0.09-0.09,0.93-1.04,0.49-1.04c-0.58,0-1.21,0.6-1.59,0.98
+                        C1090.39-528.09,1089.54-527.14,1089.98-527.14L1089.98-527.14z"/>
+                </g>
             </g>
-        </g>
-    </svg>
+        </svg>
+    </div>
 </div>
+
 
 <div class="container">
     <div class="row">
@@ -135,5 +176,62 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"></script>
+
+<script>
+    (function() {
+        window.signature = {
+            initialize: function() {
+                return $('.signature svg').each(function() {
+                    var delay, i, len, length, path, paths, previousStrokeLength, results, speed;
+                    paths = $('path, circle, rect', this);
+                    delay = 0;
+                    results = [];
+                    for (i = 0, len = paths.length; i < len; i++) {
+                        path = paths[i];
+                        length = path.getTotalLength();
+                        previousStrokeLength = speed || 0;
+                        speed = length < 100 ? 20 : Math.floor(length/4);
+                        delay += previousStrokeLength + 100;
+                        results.push($(path).css('transition', 'none').attr('data-length', length).attr('data-speed', speed).attr('data-delay', delay).attr('stroke-dashoffset', length).attr('stroke-dasharray', length + ',' + length));
+                    }
+                    return results;
+                });
+            },
+            animate: function() {
+                return $('.signature svg').each(function() {
+                    var delay, i, len, length, path, paths, results, speed;
+                    paths = $('path, circle, rect', this);
+                    results = [];
+                    for (i = 0, len = paths.length; i < len; i++) {
+                        path = paths[i];
+                        length = $(path).attr('data-length');
+                        speed = $(path).attr('data-speed');
+                        delay = $(path).attr('data-delay');
+                        results.push($(path).css('transition', 'stroke-dashoffset ' + speed + 'ms ' + delay + 'ms linear').attr('stroke-dashoffset', '0'));
+                    }
+                    return results;
+                });
+            }
+        };
+
+        $(document).ready(function() {
+            window.signature.initialize();
+            return $('button').on('click', function() {
+                window.signature.initialize();
+                return setTimeout(function() {
+                    return window.signature.animate();
+                }, 500);
+            });
+        });
+
+        $(window).load(function() {
+            return window.signature.animate();
+        });
+
+    }).call(this);
+
+</script>
 </body>
 </html>
