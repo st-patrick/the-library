@@ -1,0 +1,184 @@
+==== the library abstract ===
+
+of course as a great designer this is a bit of bullshit because you will always want to come up with that one original thing, like the iPhone landing page started the trend for "scroll magic", things that hadn't usually been done before or were considered "too artsy / out there"
+so maybe a good idea is to use these rules / components but then always add that one or two very "out there" things
+
+it's basically an extension to css, a high-level way of expressing layouts
+an extension to bootstrap to emulate often-used patterns
+	things bootstrap already has: cards, buttons, navigation
+	things bootstrap doesn't have: 2 part layout premade, header premade, ...
+
+
+systematically store screenshots / graphics or even sites
+	maybe I could somehow download pages and give them markers to point to certain parts
+	otherwise screenshots would be good
+	in the long run, all that data will be perfect to create a ML algo that can recognize layouts entirely
+	
+limitations of the library
+	wording (no text itself)
+	Imagery (cause that highly depends)
+	actual functioning if Interactives
+	melding / blurring of lines (a two parter where one part "bleeds" over into the neighbor both horizontal and vertical)
+	every single part that seems trivial can have infinite variations: fonts, buttons, imagery, ...
+		so actually abstractifying makes it easier, avoiding all the creativity
+	
+	
+
+wider vision
+	train AI model to recognize existing pages and then learn to create new ones from that.
+
+
+class System
+	{Name} implements Two-Parted
+		this.left = Container{large heading, navigation}
+		this.right = carousel[Card{icon, Testimonial, Button}]
+
+
+design patterns / rules
+	the order / sequence of content stays the same, no matter what format (because it has a purpose anyway)
+		e.g. the header stays on top and the footer on bottom. The logo strip on top, the feature overview in middle
+
+
+mechanics
+	desktop to mobile
+		two-part (left, right) desktop becomes two part (top, bottom) mobile
+
+
+Global / overarching
+	brand / identity	
+		color palette
+		font
+		spacing
+		logo
+	scrollmagic
+	narrative system
+		rhythms / patterns
+			different background colors per section (looking like striped in overview)
+			horizontal rhythm of spacing
+			slalom: image left, then image right, then image left, etc...
+	fixed / floating elements
+	splittability
+		most sections basically work independently and stay together no matter whether mobile or desktop and the order of section-to-section stays the same
+
+
+unique (usually)
+	Menu
+		logo
+		top
+			usually some type of flow layout
+		hamburger
+			slide-out
+		buttons
+		menu items
+		language switcher
+	Wowser / First impression / header / top part
+		extralarge heading
+		sub-heading
+		CTA
+		extralarge featured...
+			Imagery
+			Interactive
+	Footer
+		newsletter
+		sitemap
+		copyright
+		legal
+
+
+
+Mix-and-match partials / sections
+	abstract
+		Layouts
+			Two-Parted
+				left
+					e.g. heading + sub + buttons
+				right
+					e.g. Imagery or Interactive
+			Heading + two-parted = Wower
+				Superlarge Heading on top
+				image left
+				text right
+	Logo stripe / bar
+	partial scrollmagic
+	stripe
+		cookie notice
+		other notice
+	pricing table
+	quotes
+		testimonials
+		magazines
+		other
+	carousel
+		products
+		articles
+		social
+			Insta posts
+		two-parted
+			heading left
+			carousel right
+	Wower (full-format) (similar to header)
+		extralarge Imagery
+		some text
+	scrollmagic Interactive
+		unique / original
+			e.g. transferwise rolling flags
+	Feature display
+		Array of...
+			Icon + Text
+		
+		
+		
+Components
+	Products
+		Imagery
+		name
+		description
+		price
+		variations
+			colors, ...
+	Icon + Text (often used for feature display)
+	
+
+Componitos
+	Imagery
+		abstract
+			overlapping 
+				screenshot on top of photo, displaced a little
+		video
+		3d
+		combination of one or more
+		graphic
+			isometric
+			(fake) screenshot
+				code
+		photo
+			people
+			things
+	buttons
+		prominent
+			CTA
+		secondary
+			learn more
+		app store
+			android
+			apple
+	Interactive
+		currency converter
+		newsletter signup
+		coding thingy... like API sample... but with actual interaction
+	
+	
+Flavor
+	scrollmagic
+	animations
+	overlapping
+	bleeding out 
+	supersize
+		make a section larger than or equal 100vh
+	effects
+		blurring
+		other blend modes
+Original / secrete ingredient (stuff that before had only been done in arts sites or never)
+	Apple with the scroll animations
+	amie.so with the sounds and the twitter stuff on the side
+		
