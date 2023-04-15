@@ -141,7 +141,7 @@ Nav
 
 <!--
 Wowser
-	responsive strategy: Desktop-only
+	responsive strategy: Desktop-only / grow-shrink
 	Top-bottom
 		ratio 1:2
 		Top
@@ -154,16 +154,16 @@ Wowser
 -->
 <div class="container">	
 	<!-- TOP ratio 1: Stripe -->
-	<div class="row">
+	<div class="row py-5">
 		<!-- mobile strategy: grow relative -->
-		<div class="col-12 col-xl-6 offset-xl-3 text-center">
+		<div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3 text-center">
 			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
-			<h2 class="">SUB HEADING SUB HEADIN SUB HEADING</h2>
+			<h2 class="my-3">SUB HEADING SUB HEADIN SUB HEADING</h2>
 			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
 		</div>
 	</div>	
 	<!-- Bottom ratio 2: Imagery -->
-	<div class="row my-3">
+	<div class="row py-5 mb-5">
 		<div class="col-10 offset-1">
 			<img width="100%" height="600px" src="./image.png" class="placeholder-img rounded-4" />
 		</div>
@@ -178,36 +178,47 @@ Stripe
 	CTA
 	CTA
 -->
-<div class="container-fluid bg-secondary">
-	<div class="row py-3">
-		<div class="col-12 col-xl-6 offset-xl-3">
-			<span>TEXT</span>
-			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
-			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
-		</div>
-	</div>
-</div>
-
-
-
-<!--
-Wowser
-	Imagery
--->
-<div class="container-fluid py-5">
-	<div class="row py-5">
-		<div class="col-12 placeholder-img" style="height: 800px;" >
-		</div>
-	</div>
-</div>
-
-
-<!--
-Wowser
-	Imagery
--->
+<div class="container-fluid bg-primary">
 <div class="container">
+	<div class="row py-4 align-items-center">
+		<div class="col"></div>
+		<div class="col">
+			<h4 class="text-white">SOMETHING</h4>
+		</div>
+		<div class="col">
+			<h4 class="text-white">SOMETHING</h4>
+		</div>
+		<div class="col">
+			<h4 class="text-white">SOMETHING</h4>
+		</div>
+		<div class="col">
+			<h4 class="text-white">SOMETHING</h4>
+		</div>
+		<div class="col"></div>
+	</div>
+</div>
+</div>
+
+
+
+<!--
+Wowser
+	Imagery
+-->
+<div class="container-fluid">
 	<div class="row">
+		<div class="col-12 placeholder-img" style="height: 100vh;" >
+		</div>
+	</div>
+</div>
+
+
+<!--
+Wowser
+	Imagery
+-->
+<div class="container my-5">
+	<div class="row my-5 py-5">
 		<div class="col-10 offset-1 placeholder-img" style="height: 600px;" >
 		</div>
 	</div>
@@ -222,7 +233,7 @@ Top-bottom
 	Bottom
 		Imagery
 -->
-<div class="container">	
+<div class="container my-5 py-5">	
 	<div class="row">
 		<div class="col-12 col-xl-10 offset-xl-1 text-center">
 			<h1 class="">HEADING HEADING HEADING HEAD</h1>
@@ -244,13 +255,13 @@ Top-bottom
 	Bottom
 		Imagery
 -->
-<div class="container">	
-	<div class="row">
+<div class="container my-5">	
+	<div class="row my-3">
 		<div class="col-12 col-xl-8 offset-xl-2 text-center">
 			<h1 class="">HEADING HEADING HEADING</h1>
 		</div>
 	</div>	
-	<div class="row">
+	<div class="row mb-5">
 		<div class="col-6 offset-3">
 			<img width="100%" height="300px" src="./image.png" class="placeholder-img" />
 		</div>
@@ -270,7 +281,7 @@ Left-right
 		Imagery
 -->
 <div class="container my-5">	
-	<div class="row">
+	<div class="row py-5">
 		<div class="col-12 col-xl-6">
 			<h3>SUB-SUB</h3>
 			<h2>SUB SUB SUB SUB SUB SUB</h2>
@@ -298,9 +309,10 @@ rhythm: slalom
 -->
 <div class="container">	
 	<div class="row my-5">
-		<div class="col-12 col-xl-5">
+		<div class="d-flex flex-column col-12 col-xl-5 justify-content-center">
 			<h3>SUB-SUB</h3>
 			<h2>SUB SUB SUB SUB SUB SUB</h2>
+			<br>
 		</div>		
 		<div class="col-12 col-xl-7">
 			<img class="placeholder-img" src="./image.png" width="100%" height="500px" />
@@ -310,15 +322,17 @@ rhythm: slalom
 		<div class="col-12 col-xl-7">
 			<img class="placeholder-img" src="./image.png" width="100%" height="500px" />
 		</div>	
-		<div class="col-12 col-xl-5">
+		<div class="d-flex flex-column col-12 col-xl-5 justify-content-center">
 			<h3>SUB-SUB</h3>
 			<h2>SUB SUB SUB SUB SUB SUB</h2>
+			<br>
 		</div>		
 	</div>	
 	<div class="row my-5">
-		<div class="col-12 col-xl-5">
+		<div class="d-flex flex-column col-12 col-xl-5 justify-content-center">
 			<h3>SUB-SUB</h3>
 			<h2>SUB SUB SUB SUB SUB SUB</h2>
+			<br>
 		</div>		
 		<div class="col-12 col-xl-7">
 			<img class="placeholder-img" src="./image.png" width="100%" height="500px" />
@@ -335,13 +349,12 @@ Stripe
 	Sub
 	CTA CTA
 -->
-<div class="container-fluid bg-secondary py-5">
-	<div class="row">
+<div class="container-fluid bg-primary pb-4">
+	<div class="row py-5">
 		<div class="col-12 col-xl-6 offset-xl-3 text-center">
-			<h1 class="my-3">HEAD HEAD HEADING HEAD</h1>
-			<h2 class="my-3">SUB SUB SUB SUB SUB SUB</h2>
-			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
-			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
+			<h1 class="my-3 text-white">HEAD HEAD HEADING HEAD</h1>
+			<h2 class="my-3 text-white">SUB SUB SUB SUB SUB SUB</h2>
+			<button class="btn btn-lg btn-light my-3">CTA BUTTON</button>
 		</div>
 	</div>
 </div>  
@@ -354,7 +367,7 @@ footer
 		tiny heading
 		[3-4 links]
 -->
-<div class="container py-5">
+<div class="container py-5 mb-5">
 	<div class="row">
 		<div class="col">
 			<h6>tiny heading</h6>
