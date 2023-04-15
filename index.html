@@ -34,7 +34,7 @@ how specific can I make the elements to still be generic?
 
 CTA
 
-<button class="btn btn-lg btn-primary">CTA</button>
+<button class="btn btn-lg btn-primary">CTA BUTTON</button>
 
 
 
@@ -106,18 +106,12 @@ Nav
 -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><img width="90px" height="30px" class="logo placeholder-img" src="./image.png" /></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -130,11 +124,14 @@ Nav
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link" href="#">Link</a>
+        </li>
+		        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
         </li>
       </ul>
       <div class="d-flex" role="CTA">
-        <button class="btn btn-outline-success">CTA</button>
+        <button class="btn btn-outline-secondary">CTA BUTTON</button>
       </div>
     </div>
   </div>
@@ -162,13 +159,13 @@ Wowser
 		<div class="col-12 col-xl-6 offset-xl-3 text-center">
 			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
 			<h2 class="">SUB HEADING SUB HEADIN SUB HEADING</h2>
-			<button class="btn btn-lg btn-primary">CTA</button>
+			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
 		</div>
 	</div>	
 	<!-- Bottom ratio 2: Imagery -->
-	<div class="row">
-		<div class="col-12">
-			<img width="100%" height="700px" src="./image.png" class="placeholder-img" />
+	<div class="row my-3">
+		<div class="col-10 offset-1">
+			<img width="100%" height="600px" src="./image.png" class="placeholder-img rounded-4" />
 		</div>
 	</div>
 </div>
@@ -182,11 +179,11 @@ Stripe
 	CTA
 -->
 <div class="container-fluid bg-secondary">
-	<div class="row">
+	<div class="row py-3">
 		<div class="col-12 col-xl-6 offset-xl-3">
 			<span>TEXT</span>
-			<button class="btn btn-lg btn-primary">CTA</button>
-			<button class="btn btn-lg btn-primary">CTA</button>
+			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
+			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
 		</div>
 	</div>
 </div>
@@ -197,8 +194,8 @@ Stripe
 Wowser
 	Imagery
 -->
-<div class="container-fluid">
-	<div class="row">
+<div class="container-fluid py-5">
+	<div class="row py-5">
 		<div class="col-12 placeholder-img" style="height: 800px;" >
 		</div>
 	</div>
@@ -228,13 +225,13 @@ Top-bottom
 <div class="container">	
 	<div class="row">
 		<div class="col-12 col-xl-10 offset-xl-1 text-center">
-			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
+			<h1 class="">HEADING HEADING HEADING HEAD</h1>
 			<h2 class="">SUB HEADING SUB HEADIN SUB HEADING</h2>
 		</div>
 	</div>	
-	<div class="row">
-		<div class="col-12">
-			<img width="100%" height="700px" src="./image.png" class="placeholder-img" />
+	<div class="row py-5">
+		<div class="col-4 offset-4">
+			<img width="100%" height="500px" src="./image.png" class="placeholder-img" />
 		</div>
 	</div>
 </div>
@@ -250,12 +247,12 @@ Top-bottom
 <div class="container">	
 	<div class="row">
 		<div class="col-12 col-xl-8 offset-xl-2 text-center">
-			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
+			<h1 class="">HEADING HEADING HEADING</h1>
 		</div>
 	</div>	
 	<div class="row">
-		<div class="col-12">
-			<img width="100%" height="700px" src="./image.png" class="placeholder-img" />
+		<div class="col-6 offset-3">
+			<img width="100%" height="300px" src="./image.png" class="placeholder-img" />
 		</div>
 	</div>
 </div>
@@ -272,7 +269,7 @@ Left-right
 		sub
 		Imagery
 -->
-<div class="container">	
+<div class="container my-5">	
 	<div class="row">
 		<div class="col-12 col-xl-6">
 			<h3>SUB-SUB</h3>
@@ -300,31 +297,31 @@ rhythm: slalom
 				Imagery
 -->
 <div class="container">	
-	<div class="row">
-		<div class="col-12 col-xl-4">
+	<div class="row my-5">
+		<div class="col-12 col-xl-5">
 			<h3>SUB-SUB</h3>
 			<h2>SUB SUB SUB SUB SUB SUB</h2>
 		</div>		
-		<div class="col-12 col-xl-8">
-			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+		<div class="col-12 col-xl-7">
+			<img class="placeholder-img" src="./image.png" width="100%" height="500px" />
 		</div>
 	</div>	
-	<div class="row">
-		<div class="col-12 col-xl-8">
-			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+	<div class="row my-5">
+		<div class="col-12 col-xl-7">
+			<img class="placeholder-img" src="./image.png" width="100%" height="500px" />
 		</div>	
-		<div class="col-12 col-xl-4">
+		<div class="col-12 col-xl-5">
 			<h3>SUB-SUB</h3>
 			<h2>SUB SUB SUB SUB SUB SUB</h2>
 		</div>		
 	</div>	
-	<div class="row">
-		<div class="col-12 col-xl-4">
+	<div class="row my-5">
+		<div class="col-12 col-xl-5">
 			<h3>SUB-SUB</h3>
 			<h2>SUB SUB SUB SUB SUB SUB</h2>
 		</div>		
-		<div class="col-12 col-xl-8">
-			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+		<div class="col-12 col-xl-7">
+			<img class="placeholder-img" src="./image.png" width="100%" height="500px" />
 		</div>
 	</div>	
 </div>
@@ -338,13 +335,13 @@ Stripe
 	Sub
 	CTA CTA
 -->
-<div class="container-fluid bg-secondary">
+<div class="container-fluid bg-secondary py-5">
 	<div class="row">
 		<div class="col-12 col-xl-6 offset-xl-3 text-center">
-			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
-			<h2>SUB SUB SUB SUB SUB SUB</h2>
-			<button class="btn btn-lg btn-primary">CTA</button>
-			<button class="btn btn-lg btn-primary">CTA</button>
+			<h1 class="my-3">HEAD HEAD HEADING HEAD</h1>
+			<h2 class="my-3">SUB SUB SUB SUB SUB SUB</h2>
+			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
+			<button class="btn btn-lg btn-primary">CTA BUTTON</button>
 		</div>
 	</div>
 </div>  
@@ -357,8 +354,7 @@ footer
 		tiny heading
 		[3-4 links]
 -->
-<div class="container-fluid bg-secondary">
-<div class="container">
+<div class="container py-5">
 	<div class="row">
 		<div class="col">
 			<h6>tiny heading</h6>
@@ -391,7 +387,6 @@ footer
 			<span>link</span><br>
 		</div>
 	</div>
-</div>
 </div>
 
 
