@@ -1,13 +1,401 @@
 <!doctype html>
 <html lang="en">
   <head>
+	<style>
+		.placeholder-img, .pattern-bg {
+			background-color: #e5e5f7;
+			opacity: 0.8;
+			background: linear-gradient(135deg, #444cf755 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #444cf7 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #444cf755 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #444cf7 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
+		}
+	</style>
+  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>The library built on Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
+  
+  
+  
+
+<!-- 
+----------------missing:
+adjust wowser height to screen height
+brand / identity
+spacing 
+sizing
+	could be easily solved with things like "narrow", "normal" and "wide"
+text-outline flow (2 rows, increasind line width, etc...)
+
+how specific can I make the elements to still be generic?
+
+-------------- reused:
+
+CTA
+
+<button class="btn btn-lg btn-primary">CTA</button>
+
+
+
+
+Wowser
+rhythm: striped bg
+
+<div class="container-fluid' bg-secondary">
+	<div class="row">
+		<div class="col-12">
+		</div>
+	</div>
+</div>
+
+
+
+Top-bottom
+	top	
+		Heading
+	Bottom
+		Imagery
+
+<div class="container">	
+	<div class="row">
+		<div class="col-12 col-xl-6 offset-xl-3 text-center">
+			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-12">
+			<img width="100%" height="700px" src="./image.png" class="placeholder-img" />
+		</div>
+	</div>
+</div>
+
+
+
+
+
+Stripe
+
+<div class="container-fluid bg-secondary">
+	<div class="row">
+		<div class="col-12 col-xl-6 offset-xl-3">
+
+		</div>
+	</div>
+</div>
+
+
+
+-->
+
+
+
+
+
+
+
+  
+  
+  
+  
+<!-- 
+Nav 
+	Logo
+	menu
+	CTA
+-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <div class="d-flex" role="CTA">
+        <button class="btn btn-outline-success">CTA</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<!--
+Wowser
+	responsive strategy: Desktop-only
+	Top-bottom
+		ratio 1:2
+		Top
+			Stripe
+				Headin + Sub + CTA
+		Bottom
+			Imagery
+				Overlap
+				Screenshots
+-->
+<div class="container">	
+	<!-- TOP ratio 1: Stripe -->
+	<div class="row">
+		<!-- mobile strategy: grow relative -->
+		<div class="col-12 col-xl-6 offset-xl-3 text-center">
+			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
+			<h2 class="">SUB HEADING SUB HEADIN SUB HEADING</h2>
+			<button class="btn btn-lg btn-primary">CTA</button>
+		</div>
+	</div>	
+	<!-- Bottom ratio 2: Imagery -->
+	<div class="row">
+		<div class="col-12">
+			<img width="100%" height="700px" src="./image.png" class="placeholder-img" />
+		</div>
+	</div>
+</div>
+  
+  
+<!--
+Stripe
+	part of rhythm: striped BGs
+	Txt
+	CTA
+	CTA
+-->
+<div class="container-fluid bg-secondary">
+	<div class="row">
+		<div class="col-12 col-xl-6 offset-xl-3">
+			<span>TEXT</span>
+			<button class="btn btn-lg btn-primary">CTA</button>
+			<button class="btn btn-lg btn-primary">CTA</button>
+		</div>
+	</div>
+</div>
+
+
+
+<!--
+Wowser
+	Imagery
+-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 placeholder-img" style="height: 800px;" >
+		</div>
+	</div>
+</div>
+
+
+<!--
+Wowser
+	Imagery
+-->
+<div class="container">
+	<div class="row">
+		<div class="col-10 offset-1 placeholder-img" style="height: 600px;" >
+		</div>
+	</div>
+</div>
+
+
+<!--
+Top-bottom
+	top	
+		Heading
+		sub
+	Bottom
+		Imagery
+-->
+<div class="container">	
+	<div class="row">
+		<div class="col-12 col-xl-10 offset-xl-1 text-center">
+			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
+			<h2 class="">SUB HEADING SUB HEADIN SUB HEADING</h2>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-12">
+			<img width="100%" height="700px" src="./image.png" class="placeholder-img" />
+		</div>
+	</div>
+</div>
+
+
+<!--
+Top-bottom
+	top	
+		Heading
+	Bottom
+		Imagery
+-->
+<div class="container">	
+	<div class="row">
+		<div class="col-12 col-xl-8 offset-xl-2 text-center">
+			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-12">
+			<img width="100%" height="700px" src="./image.png" class="placeholder-img" />
+		</div>
+	</div>
+</div>
+
+
+<!--
+Left-right
+	left
+		sub-sub
+		sub
+		Imagery
+	right
+		sub-sub
+		sub
+		Imagery
+-->
+<div class="container">	
+	<div class="row">
+		<div class="col-12 col-xl-6">
+			<h3>SUB-SUB</h3>
+			<h2>SUB SUB SUB SUB SUB SUB</h2>
+			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+		</div>		
+		<div class="col-12 col-xl-6">
+			<h3>SUB-SUB</h3>
+			<h2>SUB SUB SUB SUB SUB SUB</h2>
+			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+		</div>
+	</div>	
+</div>
+
+
+
+<!--
+rhythm: slalom
+	3x
+		left-right golden ratio
+			left
+				sub-sub
+				sub
+			right
+				Imagery
+-->
+<div class="container">	
+	<div class="row">
+		<div class="col-12 col-xl-4">
+			<h3>SUB-SUB</h3>
+			<h2>SUB SUB SUB SUB SUB SUB</h2>
+		</div>		
+		<div class="col-12 col-xl-8">
+			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col-12 col-xl-8">
+			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+		</div>	
+		<div class="col-12 col-xl-4">
+			<h3>SUB-SUB</h3>
+			<h2>SUB SUB SUB SUB SUB SUB</h2>
+		</div>		
+	</div>	
+	<div class="row">
+		<div class="col-12 col-xl-4">
+			<h3>SUB-SUB</h3>
+			<h2>SUB SUB SUB SUB SUB SUB</h2>
+		</div>		
+		<div class="col-12 col-xl-8">
+			<img class="placeholder-img" src="./image.png" width="100%" height="300px" />
+		</div>
+	</div>	
+</div>
+
+  
+<!--
+"Final CTA Banner"
+
+Stripe
+	Heading
+	Sub
+	CTA CTA
+-->
+<div class="container-fluid bg-secondary">
+	<div class="row">
+		<div class="col-12 col-xl-6 offset-xl-3 text-center">
+			<h1 class="display-1">HEAD HEAD HEADING HEAD</h1>
+			<h2>SUB SUB SUB SUB SUB SUB</h2>
+			<button class="btn btn-lg btn-primary">CTA</button>
+			<button class="btn btn-lg btn-primary">CTA</button>
+		</div>
+	</div>
+</div>  
+
+
+
+<!--
+footer
+	x-column sitemap (5)
+		tiny heading
+		[3-4 links]
+-->
+<div class="container-fluid bg-secondary">
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h6>tiny heading</h6>
+			<span>link</span><br>
+			<span>link</span><br>
+			<span>link</span><br>
+		</div>
+		<div class="col">
+			<h6>tiny heading</h6>
+			<span>link</span><br>
+			<span>link</span><br>
+			<span>link</span><br>
+		</div>
+		<div class="col">
+			<h6>tiny heading</h6>
+			<span>link</span><br>
+			<span>link</span><br>
+			<span>link</span><br>
+		</div>
+		<div class="col">
+			<h6>tiny heading</h6>
+			<span>link</span><br>
+			<span>link</span><br>
+			<span>link</span><br>
+		</div>
+		<div class="col">
+			<h6>tiny heading</h6>
+			<span>link</span><br>
+			<span>link</span><br>
+			<span>link</span><br>
+		</div>
+	</div>
+</div>
+</div>
+
+
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
 </html>
