@@ -1,6 +1,8 @@
 # the-library
 perfect frontend library
 
+translating popular frontend patterns into reusable bootstrap combos
+
 common patterns, components, etc...
 kind of like tailwind but instead of standardizing details, it standardizes combinations
 
@@ -16,3 +18,7 @@ most easily CTA -> <button{...}
 feature ideas:
 + browse templates by outline description
 + brose templates visually
+
+
+MVP:
++ a compiler that turns the highly abstract indented syntax into bootstrap HTML as a starting point

@@ -50,7 +50,12 @@ Global / overarching
 		font
 		spacing
 		logo
+	responsive widths
+		e.g. apple landing page's content has only one width after > 1069px screen width to insure consistency of spacing effects etc...
+			and only one mobile breakpoint after 735, so only 2 breakpoints total!
 	scrollmagic
+	width of desktop experience
+		e.g. apple landing pages are narrower than most on desktop (except full format imagery)
 	narrative system
 		rhythms / patterns
 			different background colors per section (looking like striped in overview)
@@ -145,6 +150,7 @@ Componitos
 			overlapping 
 				screenshot on top of photo, displaced a little
 		video
+		Collage
 		3d
 		combination of one or more
 		graphic
@@ -154,6 +160,7 @@ Componitos
 		photo
 			people
 			things
+	Icon
 	buttons
 		prominent
 			CTA
@@ -169,12 +176,38 @@ Componitos
 	
 	
 Flavor
-	scrollmagic
+	bucket of trendy:
+		tiles
+		appear when scrolling into view
+	interactions
+		scrollmagic
+			elements appear when scrolled into view / disappear when scrolling back up
+			animations / videos start / continue running while scrolling
 	animations
+		Videos
+		SVGs
+		images with css transform
+		other
+			animate HTML itself 
+			animate first impression, to catch attention without interaction
+			ticker
+				an array of elements running continuously horizontally
+					licke a stock ticker on TV
+					e.g. logos running 
+					carousel going automatically
 	overlapping
+	shapes
+		take some Imagery and crop it in unusual shapes and forms
 	bleeding out 
+		containers not ending with a horizontal line or blank but a diagonal or otherwise shape
+		allow pictures to "escape" the grid / standard width
 	supersize
 		make a section larger than or equal 100vh
+	Typesetting
+		make text narrower than the heading
+	Spacing
+		lots of "air" between sections
+		have the space in the images interact with typesetting
 	effects
 		blurring
 		other blend modes
