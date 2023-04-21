@@ -179,6 +179,9 @@ Flavor
 	bucket of trendy:
 		tiles
 		appear when scrolling into view
+	subtleties:
+		consistent sizing
+			the iPad is the exact same size in almost all mockups on its landing page
 	interactions
 		scrollmagic
 			elements appear when scrolled into view / disappear when scrolling back up
