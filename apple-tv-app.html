@@ -29,11 +29,14 @@
 			overflow-x: hidden;
 		}
 		
+		.lead {
+			line-height: 1.25;
+			font-weight: 500;
+		}		
 		.lead-xl {
 			font-size: 1.5rem;
-			line-height: 1.25;
-			font-weight: 600;
 		}
+		
 		
 		.display-1 {
 			font-size: 6.4rem;
@@ -43,10 +46,17 @@
 		h1, h2, h3, h4, h5, h6 {
 			letter-spacing: -0.03em;
 		}
+		
+		.bg-body-secondary {
+			background-color: #f1f1f4!important;
+		}
+		.bg-body-tertiary {
+			background-color: #f5f5f7!important;
+		}
 	</style>
   
   </head>
-  <body>
+  <body class="bg-body-secondary">
   
   
   
@@ -174,7 +184,7 @@ Nav
 	CTA
 -->
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-white py-2 small">
   <div class="container">
   <div class="row w-100 mx-5">
   <div class="d-flex justify-content-between">
@@ -212,11 +222,13 @@ Nav
   </div>
 </nav>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar fixed-top navbar-expand-lg shadow-sm py-3"
+	style="backdrop-filter: saturate(180%) blur(20px);
+			background: rgba(255, 255, 255, 0.9);">
   <div class="container">
   <div class="row mx-5">
   <div class="col">
-	<h4>Zoingo TV App</h4>
+	<h5>Zoingo TV App</h5>
   </div>
   </div>
   </div>
@@ -290,7 +302,7 @@ Fat ass header
 (fixed image)
 
 -->
-<div class="container-fluid mb-5 py-5 bg-light">
+<div class="container-fluid mb-5 py-5 bg-body-secondary">
 	<div class="row mt-5 pt-5">
 		<div class="col-12 col-xl-9 offset-1 mt-5">
 			<h1 class="display-1 fw-bold" style="font-size: 7rem; line-height: 1;">
@@ -301,6 +313,7 @@ Fat ass header
 	<div class="row">		
 		<div class="col-12">
 			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br>
 		</div>
 	</div>	
 </div>
@@ -310,11 +323,11 @@ The slidy pt2
 fixed image
 
 -->
-<div style="height: 60vh;">
-<div style="height: 504vh;">
-<div class="container-fluid position-sticky" style="top: 10vh; margin-top: -40vh;">
+<div class="pe-none" style="height: 90vh;">
+<div style="height: 560vh;">
+<div class="container-fluid position-sticky" style="top: 10vh; margin-top: -70vh;">
 	<div class="row">
-		<div class="col-12 col-xl-10 offset-xl-5 text-right" style="height: 70vh;">
+		<div class="col-12 col-xl-10 offset-xl-5 text-right" style="height: 80vh;">
 			<img class="" height="100%" src="https://apple.com/v/apple-tv-app/w/images/overview/tv_screen_4__egly0auw7yeu_large_2x.jpg" />
 		</div>
 	</div>
@@ -336,27 +349,27 @@ The slidy pt3
 -->
 <div class="container-fluid bg-white py-5" style="margin-top: -40vh;">
 	<div class="row mb-5 py-5">
-		<div class="col-12 col-xl-4 offset-xl-1 text-right">
+		<div class="col-12 col-xl-3 offset-xl-1 text-right">
 			<br><br><br><br><br><br><br><br>
 			<img width="150px" src="https://apple.com/v/apple-tv-app/w/images/overview/apple_tv_plus_icon__bjeipz6zw8dy_large_2x.png" />
 			<br><br>
-			<p class="lead lead-xl text-secondary ">Apple TV+ streams critically acclaimed Apple Original series and films, only on the Apple TV app.</p>
-			<a class="lead" href="#">Learn more ></a><br>
-			<a class="lead" href="#">Stream Now <i class="bi bi-play-circle"></i></a>
+			<p class="lead lead-xl text-secondary mb-2">Apple TV+ streams critically acclaimed Apple Original series and films, only on the Apple TV app.</p>
+			<a class="lead lead-xl text-decoration-none" href="#">Learn more ></a><br>
+			<a class="lead lead-xl text-decoration-none" href="#">Stream Now <i class="bi bi-play-circle"></i></a>
 		</div>
 	</div>
 	<div class="row mb-5 py-5">
-		<div class="col-12 col-xl-4 offset-xl-1 text-right pe-5">
+		<div class="col-12 col-xl-3 offset-xl-1 text-right">
 			<br><br><br><br><br><br><br><br>
 			<p class="lead lead-xl text-secondary ">
 				<span class="text-black">It’s never been easier to be a fan.</span> Tune in to more in-depth coverage of your favorite teams. Browse by sport or league, and get live scores and notifications for close games.
 <br><br>
 And now you can watch every Major League Soccer match — including the playoffs and bonus content — with MLS Season Pass on the Apple TV app.*</p>
-			<a  class="lead" href="#">Learn more about MLS Season Pass</a><br>
+			<a class="lead lead-xl text-decoration-none"  href="#">Learn more about MLS Season Pass</a><br>
 		</div>
 	</div>
 	<div class="row mb-5 py-5">
-		<div class="col-12 col-xl-4 offset-xl-1 text-right pe-5">
+		<div class="col-12 col-xl-3 offset-xl-1 text-right">
 			<br><br><br><br><br><br><br><br>
 			<p class="lead lead-xl  text-secondary">
 				<span class="text-black">Take control of your channels.</span>
@@ -372,7 +385,7 @@ And now you can watch every Major League Soccer match — including the playoffs
 		</div>
 	</div>
 	<div class="row mb-5 py-5">
-		<div class="col-12 col-xl-4 offset-xl-1 text-right pe-5">
+		<div class="col-12 col-xl-3 offset-xl-1 text-right">
 			<br><br><br><br><br><br><br><br>
 			<p class="lead lead-xl  text-secondary">
 				<span class="text-black">Buy. Rent. Watch. All inside the app.</span>
@@ -380,7 +393,7 @@ And now you can watch every Major League Soccer match — including the playoffs
 		</div>
 	</div>
 	<div class="row mb-5 py-5">
-		<div class="col-12 col-xl-4 offset-xl-1 text-right pe-5">
+		<div class="col-12 col-xl-3 offset-xl-1 text-right">
 			<br><br><br><br><br><br><br><br>
 			<p class="lead lead-xl  text-secondary">
 				<span class="text-black">Streaming services, streamlined.</span>
@@ -396,14 +409,14 @@ And now you can watch every Major League Soccer match — including the playoffs
 		</div>
 	</div>	
 	<div class="row mb-5 py-5">
-		<div class="col-12 col-xl-4 offset-xl-1 text-right">
+		<div class="col-12 col-xl-3 offset-xl-1 text-right">
 			<br><br><br><br><br><br><br><br>
 			<p class="lead-xl text-secondary ">
 				<span class="text-black">Watch cable TV outside</span>
 				the box. Enjoy all the top-rated prime-time TV shows, live sports, and news — from leading cable providers — on demand right in the Apple TV app.</p>
 			<img src="" class="placeholder-img" width="120px" height="60px"/>
 			<img src="" class="placeholder-img" width="120px" height="60px"/>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		</div>
 	</div>	
 </div>
@@ -415,7 +428,7 @@ Wowser
 	xxl heading
 	90% format fill image
 -->
-<div class="container-fluid mb-5 py-5 bg-light" style="height: 100vh">
+<div class="container-fluid mb-5 py-5 bg-body-secondary" style="height: 100vh">
 	<div class="row mt-5 pt-5">
 		<div class="col-12 col-xl-10 offset-1 my-5">
 			<h1 class="display-1 fw-bold" style="font-size: 7rem; line-height: 1;">
@@ -455,19 +468,25 @@ Triple Trouble
 			Imagery
 				full-format
 -->
-<div class="container-fluid bg-light py-5">
+<div class="container-fluid bg-body-secondary py-5">
 <div class="container">
 	<div class="row mt-5 pt-5">
-		<div class="col-12">
+		<div class="col-12 d-flex justify-content-between align-items-center">
 			<h1 class="fw-bold">For All of You</h1>
+			<div class="bg-secondary-subtle rounded-5 p-3 d-flex" style="">
+				<div class="pattern-bg rounded-5 me-3" style="width: 2.5rem; aspect-ratio: 1/1;"> </div>
+				<div class="pattern-bg rounded-5 me-3" style="width: 2.5rem; aspect-ratio: 1/1;"> </div>
+				<div class="pattern-bg rounded-5 me-3" style="width: 2.5rem; aspect-ratio: 1/1;"> </div>
+				<div class="pattern-bg rounded-5" style="width: 2.5rem; aspect-ratio: 1/1;"> </div>
+			</div>
 		</div>
 	</div>
 	<div class="row mb-5">
-		<div class="col pattern-bg m-3 rounded-3" style="height: 250px;">
+		<div class="col pattern-bg m-3 rounded-3 shadow-lg" style="height: 250px;">
 		</div>
-		<div class="col pattern-bg m-3 rounded-3" style="height: 250px;">
+		<div class="col pattern-bg m-3 rounded-3 shadow-lg" style="height: 250px;">
 		</div>
-		<div class="col pattern-bg m-3 rounded-3" style="height: 250px;">
+		<div class="col pattern-bg m-3 rounded-3 shadow-lg" style="height: 250px;">
 		</div>
 	</div>
 </div>
@@ -499,7 +518,7 @@ Stripe: Carousel
 			Imagery
 				full-format
 -->
-<div class="container-fluid bg-light py-5">
+<div class="container-fluid bg-body-secondary py-5">
 <div class="container">
 	<div class="row mt-5 pt-5">
 		<div class="col-12">
@@ -507,15 +526,15 @@ Stripe: Carousel
 		</div>
 	</div>
 	<div class="row mb-5">
-		<div class="col pattern-bg m-3 rounded-3" style="height: 250px;">
+		<div class="col pattern-bg m-3 rounded-3 shadow-lg" style="height: 250px;">
 		</div>
 		<div class="col m-3 rounded-3" style="height: 250px;">
 			<br>
 			<h5 class="text-secondary">SCI-FI</h5>
 			<h2 class="">Nope</h2>
-			<p class="lead fw-bold text-secondary">This eerie sci-fi spectacle is an electrifying homage to creature feature classics.</p>
+			<p class="lead fw-bold text-secondary me-5">This eerie sci-fi spectacle is an electrifying homage to creature feature classics.</p>
 		</div>
-		<div class="col pattern-bg m-3 rounded-3" style="height: 250px;">
+		<div class="col pattern-bg m-3 rounded-3 shadow-lg" style="height: 250px;">
 		</div>
 	</div>
 </div>
@@ -542,8 +561,8 @@ Light Wowser
 		<div class="col-12 col-xl-8 offset-xl-2 pattern-bg	 rounded-3" style="height: 65vh;">
 		</div>
 	</div>
-	<div class="row pb-5">
-		<div class="col-12 col-xl-6 offset-xl-3">
+	<div class="row pb-5 my-5">
+		<div class="col-12 col-xl-6 offset-xl-3 my-5">
 			<p class="lead lead-xl text-secondary">
 				<span class="text-black">A dedicated Kids section. For kids of all ages.</span>
 				You can easily find great shows selected just for children — categorized by character, topic, and even age — unless your kids find them first.
@@ -559,7 +578,7 @@ Wowser
 	xxl heading
 	90% format fill image
 -->
-<div class="container-fluid mb-5 py-5 bg-light" style="height: 100vh">
+<div class="container-fluid mb-5 py-5 bg-body-secondary" style="height: 100vh">
 	<div class="row mt-5 pt-5">
 		<div class="col-12 col-xl-10 offset-1 my-5">
 			<h1 class="display-1 fw-bold" style="font-size: 7rem; line-height: 1;">
@@ -579,110 +598,107 @@ is a TV screen.
 
 
 <!---
-fillin de void maan
+TODO: fill in
 -->
-<div class="container-fluid bg-white mb-5 pt-5">
+<div class="container-fluid bg-white pt-5">
 	<div class="row mt-5 pt-5">
-		<div class="col-12 col-xl-6 offset-xl-3  mt-5 pt-5 text-center">
+		<div class="col-12 col-xl-8 offset-xl-2  mt-5 pt-5 text-center">
 			<br><br><br><br>	
 			<h1>The Apple TV app is everywhere.</h1>
 			<br>
-			<p class="lead lead-xl text-secondary">The Apple TV app is already on your favorite Apple devices, as well as streaming platforms, popular smart TVs, gaming consoles, and AirPlay‑enabled devices. Just open the app to start watching.</p>
+			<p class="lead lead-xl text-secondary">
+			The Apple TV app is already on your favorite Apple devices, as well as<br>
+			streaming platforms, popular smart TVs, gaming consoles, and<br>
+			AirPlay-enabled devices. Just open the app to start watching.</p>
 		
-			<br><br><br><br><br><br><br><br>		
+			<br><br>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col text-center"></div>
-		<div class="col text-center">aaa</div>
-		<div class="col text-center">aaa</div>
-		<div class="col text-center">aaa</div>
-		<div class="col text-center">aaa</div>
-		<div class="col text-center">aaa</div>
+		<div class="col text-center lead"><i class="bi bi-laptop display-1"></i><br>laptop</div>
+		<div class="col text-center lead"><i class="bi bi-laptop display-1"></i><br>macBook</div>
+		<div class="col text-center lead"><i class="bi bi-laptop display-1"></i><br>Dell XPS</div>
+		<div class="col text-center lead"><i class="bi bi-laptop display-1"></i><br>Razor</div>
+		<div class="col text-center lead"><i class="bi bi-laptop display-1"></i><br>Ubuntu</div>
 		<div class="col text-center"></div>
 	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-<!---
-
-left-right harmonic ratio
-flavor: text narrower than heading
-
--->
-<div class="container mt-5 pt-5">	
-		<div class="col-12 col-xl-6  offset-xl-1">
-			<h1 class="display-1">Meet the redesigned iPad</h1>
-			<p class="w-75 lead fw-bold text-secondary">
-			The all-new iPad is colorfully reimagined to be more capable, more intuitive, and even more fun. With a new all‑screen design, 10.9-inch Liquid Retina display, and four gorgeous colors, iPad delivers a powerful way to get things done, create, and stay connected.1 Add on essential accessories designed just for iPad and enjoy endless versatility for everything you love to do.
-			</p>			
-		</div>		
-	</div>	
+	<div class="row my-5">
+		<div class="col-12 col-xl-8 offset-xl-2 text-center mb-5">
+			<br>
+			<h1>See it on your big screen.</h1>
+			<a href="#" class="text-decoration-none">Explore Compatible Devices</a>
+			<br><br><br>
+			<div class="d-flex justify-content-between align-items-center">
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+			</div>
+			<div class="d-flex justify-content-between align-items-center">
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+				<img src="https://apple.com/v/apple-tv-app/w/images/overview/icon_samsung__cni8cl603w9y_large_2x.jpg" style="width: 117px; height: 81px;"/>
+			</div>
+		</div>	
+	</div>
+	<div class="row mt-5 p-5">
+		<div class="col-12 bg-black text-center mt-5 p-5" style="height: 65vh;">
+			<br>
+			<img width="100px" style="filter: invert(1);" src="https://apple.com/v/apple-tv-app/w/images/overview/apple_tv_plus_icon__bjeipz6zw8dy_large_2x.png" />
+			<br><br>
+			<h2 class="text-white mb-3">Get 3 months of Apple TV+ free<br>
+when you buy an Apple TV 4K.2</h2>
+			<a href="#" class="text-decoration-none lead lead-xl me-4">Try it free</a>
+			<a href="#" class="text-decoration-none lead lead-xl">Learn more ></a>
+			<br><br><br>
+			
+		</div>	
+	</div>
 </div>
 
 
 
 <!--
-Wowser
-	narrow size
-	more than 100vh (around 180vh)
-	Imagery
+left-right
+	style: half-half
+		each
+			small thing
+			Heading
+			button(s)
+			Imagery
 -->
-<div class="container">
-	<div class="row">
-		<div class="col-10 offset-1 placeholder-img h-175vh" >
+<div class="container-fluid bg-white pb-5">	
+	<div class="row px-5 pb-5">
+		<div class="col-12 col-xl-6 pe-4 ps-0 bg-body-tertiary text-center d-flex flex-column justify-content-between align-items-center" style="background-clip: content-box;">
+			<div>
+				<br><br><br>
+				<img class="mb-3" height="33px" src="https://apple.com/v/apple-tv-app/w/images/overview/apple_tv_4k_logo__dz99tqv3uliu_large_2x.png" />
+				<h1 class="fw-bold display-5">The Apple experience.<br>
+	Cinematic in every sense.</h1>
+				<br>
+				<div class="d-flex align-items-center justify-content-center text-center">
+					<button class="btn btn-primary rounded-5 me-5 lead px-3">Buy</button>
+					<a class="lead text-decoration-none" href="#">Learn more ></a><br>
+				</div>
+				<br><br>
+			</div>
+			<img width="83%" src="https://apple.com/v/apple-tv-app/w/images/overview/apple_tv_4k_remote__es0p632bdk02_large_2x.jpg" />
+		</div>		
+		<div class="col-12 col-xl-6 ps-4 pe-0 bg-body-tertiary text-center" style="background-clip: content-box;">
+			<br><br><br>
+			<h2>AirPlay</h2>
+			<h1 class="fw-bold display-5">And just like that,<br>
+it’s on TV.</h1>
+			<br>
+			<a class="lead text-decoration-none my-2" href="#">Learn more ></a><br>
+			<br>
+			<img width="100%" src="https://apple.com/v/apple-tv-app/w/images/overview/air_play__tjqhrnet7ciq_large_2x.jpg" />
 		</div>
-	</div>
-</div>
-
-
-
-
-<!---
-slalom x3
-	flavor: play with spacing.. some additional after first row, leave right part blank in the end
-	left-right harmonic ratio
--->
-<div class="container mt-5 pt-5">	
-	<div class="row my-5 pt-5 h-100vh">
-		<div class="col-12 col-xl-7  offset-xl-1">
-			<img class="placeholder-img ml-n20" width="120%" height="50%" />	
-		</div>		
-		<div class="col-12 col-xl-3">
-			<div><i class="bi-alarm" style="font-size: 3rem;"></i></div>
-			<p class="lead fw-bold text-secondary">
-			Draw, paint, and write with Apple Pencil. Type comfortably, use a trackpad, and enjoy content with the versatile two-piece design of the Magic Keyboard Folio.2 You can use familiar keyboard shortcuts or the click-anywhere trackpad. And get an incredible typing experience.
-			</p>			
-			<img class="placeholder-img" width="110%" height="40%" />	
-		</div>		
 	</div>	
-	<div class="row my-5 pt-5">
-		<div class="col-12 col-xl-4 offset-xl-1">
-			<div><i class="bi-alarm" style="font-size: 3rem;"></i></div>
-			<p class="w-75 lead fw-bold text-secondary">
-			Draw, paint, and write with Apple Pencil. Type comfortably, use a trackpad, and enjoy content with the versatile two-piece design of the Magic Keyboard Folio.2 You can use familiar keyboard shortcuts or the click-anywhere trackpad. And get an incredible typing experience.
-			</p>			
-		</div>	
-		<div class="col-12 col-xl-6">
-			<img class="placeholder-img" width="120%" height="500px" />	
-		</div>			
-	</div>		
-	<div class="row my-5 pt-5">
-		<div class="col-12 col-xl-6 offset-xl-1">
-			<img class="placeholder-img" width="120%" height="500px" />	
-		</div>		
-		<div class="col-12 col-xl-4 ">		
-		</div>	
-	</div>		
 </div>
 
 
