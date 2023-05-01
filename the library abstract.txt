@@ -1,7 +1,84 @@
 ==== the library abstract ===
+"Legos for landing pages and the extended universe (about us, yadda yadda)"
+
+main directions:
+	+ an actual vast library of screenshots, snippets, ..
+		+ even just doing this manually for 2 hours, it turns out as a massive undertaking, impossible to do manually
+			+ seems like tagging and categorzing etc... in some machine understandable format is inevitable
+				+ json that has the filename and then some under it.... so the filename is the "ID" basically
+			+ possibly also describe them in my meta language
+			+ tagging by...
+				+ layout
+				+ colors
+				+ the "meaning"
+					+ showing the actual novelty / USP
+					+ showing off other great features
+					+ credibility
+				+ compatibility with imagery, flavors, etc... (for snippets especially)
+		+ the graphical way makes it easy to avoid all the bullshit surrounding react vs angular, bootstrap v tailwind BLA BLA FUCKING BLA
+	+ a creativity tool to mix and match patterns and come up with new stuff
+		+ MVP
+			+ instead of creating the real deal, just mix and match the text descriptions and then read through them
+				+ without a visual rep
+			+ create random brand identities
+				+ color schemes khroma
+				+ font
+				+ amount of space
+			+ 
+	+ a meta language to quickly create layouts (in bootstrap)
+	+ a machine to spit out landing pages (templates) in an original way and requiring as little manual intervention as possible
+		+ random sequence of generic bootstrap containers
+		+ random sequence of partial screenshots
+		
+Problem:
++ my problem is with coming up with a flow, new ideas, etc...
+	that moment when someone commissions a "website" and now you stare at a blank canvas, writer's block
++ browsing all these Bootstrap UI libraries, it becomes painfully obvious that the actual implementation is never the problem
+	but much more coming up with fresh ideas for content, ...
++ there are layout kits for designers (for Ps,Sketch) but almost none at all for frontend code
+	or usually every kit only contains like 10 sections and 5 boring ass pages
++ I want to create endless templates for sale but certainly not handwrite them from scratch every time
++ there are enough blocks and there are enough designs out there
+	what's not there is something that puts together creative new ideas to help you come up with something
++ clients don't know what they want
+	=> something like a collection of very or slightly different templates to get a preference
+		=> like always giving two options and them picking one over the other.
+
+Collection of Designs / Imagery / Screenshot partials:
++ It is an endless job
++ would be easier automated
++ 
+
+Random Landing Page Generator:
++ just put nav, header, content, footer in order, everything random
++ you can like a section (which makes it stay) and its position in the site (for content parts)
++ slot / interface system
+	+ but then, these interfaces themselves can be swapped out 
+	+ landing page = 1-2 nav slots, 1 header slot, 1-7 content slots, 1 footer slot
+		+ nav slot = 1 logo slot, 1 nav element collection, 1 cta area
+		+ header slot = 
+		
+	
+Blackbox thinking / let's skip the collection of endless modules.
++ pretending I already have a large ass collection of sections and components, fully mapped, tagged, categorized, interfaceazzled, ...
+	+ getRandom(nav, header, getRandomContent(7), footer)
+	+ equalizeWidth()
+	+ equalizeColors
+	+ replaceWith( moreText )
+	+ replaceWith( largerImagery )
+	+ replaceWith( AppleStyle )
+	
+	
 
 of course as a great designer this is a bit of bullshit because you will always want to come up with that one original thing, like the iPhone landing page started the trend for "scroll magic", things that hadn't usually been done before or were considered "too artsy / out there"
 so maybe a good idea is to use these rules / components but then always add that one or two very "out there" things
+
+an endless amount of partial screenshots / screenvideos (replayed like the scroll animations, frame by frame) and code snippets, described by keywords like here:
+	+ left-right, Imagery, animation, magic, mobile, grid, masonry, ....
+	+ also keywords maybe on what is displayed (esp on screenshots): features list
+	+ automatically rate snippets by things like: readability, amount of "words" used (less is better), ...
+	+ optimally auto suggest plenty of those keywords
+	+ imagery is easier to combine, cause the snippets can easily interfere with each other's classes, css, ...
 
 it's basically an extension to css, a high-level way of expressing layouts
 an extension to bootstrap to emulate often-used patterns
@@ -23,6 +100,71 @@ limitations of the library
 		so actually abstractifying makes it easier, avoiding all the creativity
 	
 	
+Instead of being a website builder, be a website accelerator:
+ + give feedback
+ + analyze metrics automatically
+ + guide the dev and designer instead of trying to replace their work
+	
+	
+Crawling:
+	+ optimal would be a great AI 
+	+ for now, manually is easier
+		+ copy (time-intense)
+		+ analyze by markup full size screenshots
+			+ layout chunks
+			+ color
+			+ font
+			+ subtleties
+		+ how does it reflect the subject nature?
+			+ established / big:
+				+ space. lots of space. Letting you breathe
+			+ reading / authors / ..
+				+ serif font
+			+ we take you seriously:
+				+ dark theme
+				+ sophisticated screenshottery
+			+ education:
+				+ calm, neutral colors, clean shapes, repetition, patterns
+			+ showbiz
+				+ wowsers, xxl headings, ...
+			+ food, groceries, ..
+				+ visceral, colorful
+				+ restaurants
+					+ lots of photography, out-of-the-ordinary layouts			
+	more important than I thought:
+		+ length and shape of copy
+		+ the art of screenshottery
+		+ 
+			
+
+
+	
+Features:
+	+ really, these basic elements I identified are already enough. Now would be the time to automate variations:
+		+ Position and size of heading on top hero
+		+ Font
+		+ Color composition
+			+ categories: 
+				+ background colors
+				+ 
+			+ constraints:
+				+ contrast of text on background
+				+ contrast of stripe backgrounds
+	+ and automate combining different things
+		+ triple threat x videos
+		+ left-right x sticky
+
+
+landing page / website design categorization
+	the Apple: interactive, animated, Wowser
+	the sober: classic elements from head to toe, all about copy and education
+	the ugly: a seemingly ugly design that is easy on the eyes and has amazing copy
+	the artsy: all kinds of animations, left is down and right is through
+	the wordpress agency: some kind of cms / template like design that is a solid mix of classic elements and beautiful design
+
+
+
+
 
 wider vision
 	train AI model to recognize existing pages and then learn to create new ones from that.
@@ -37,7 +179,9 @@ class System
 design patterns / rules
 	the order / sequence of content stays the same, no matter what format (because it has a purpose anyway)
 		e.g. the header stays on top and the footer on bottom. The logo strip on top, the feature overview in middle
-
+	there is a narrative top to bottom
+		common: hero, logos, short description, feature overview, testimonials, FAQ, footer
+	
 
 mechanics
 	desktop to mobile
@@ -187,6 +331,9 @@ Flavor
 			elements appear when scrolled into view / disappear when scrolling back up
 			animations / videos start / continue running while scrolling
 	animations
+		colors
+			background
+				"turn the lights of" cinematic and then "turn the lights on" to "wake up" again (ipad air landing)
 		Videos
 		SVGs
 		images with css transform
@@ -213,6 +360,7 @@ Flavor
 		have the space in the images interact with typesetting
 	effects
 		blurring
+		overlay an almost transparent color / gradient, kind of like a mist of mood, unnoticeable
 		other blend modes
 Original / secrete ingredient (stuff that before had only been done in arts sites or never)
 	Apple with the scroll animations
