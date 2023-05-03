@@ -1,11 +1,13 @@
 ==== the library abstract ===
 "Legos for landing pages and the extended universe (about us, yadda yadda)"
+"AI / automation for creating inspiring random landing pages or parts of it"
+"systematically organized collection of frontend parts that is searchable by keywords and combineable by machine"
+
+
 
 main directions:
 	+ an actual vast library of screenshots, snippets, ..
-		+ even just doing this manually for 2 hours, it turns out as a massive undertaking, impossible to do manually
-			+ seems like tagging and categorzing etc... in some machine understandable format is inevitable
-				+ json that has the filename and then some under it.... so the filename is the "ID" basically
+		+ seems like tagging and categorzing etc... in some machine understandable format is inevitable bc browsing manually impossible
 			+ possibly also describe them in my meta language
 			+ tagging by...
 				+ layout
@@ -16,15 +18,19 @@ main directions:
 					+ credibility
 				+ compatibility with imagery, flavors, etc... (for snippets especially)
 		+ the graphical way makes it easy to avoid all the bullshit surrounding react vs angular, bootstrap v tailwind BLA BLA FUCKING BLA
+			+ then something for Figma might make more sense. Or not even that, just html. Then we're back to bootstrap.
 	+ a creativity tool to mix and match patterns and come up with new stuff
+		+ main difference: GUI to...
+			+ like and dislike parts of the randomly generated
+			+ search and add elements
 		+ MVP
 			+ instead of creating the real deal, just mix and match the text descriptions and then read through them
 				+ without a visual rep
 			+ create random brand identities
-				+ color schemes khroma
-				+ font
-				+ amount of space
-			+ 
+				+ take the same website / landing page and exchange...
+					+ color schemes khroma
+					+ font
+					+ amount of space
 	+ a meta language to quickly create layouts (in bootstrap)
 	+ a machine to spit out landing pages (templates) in an original way and requiring as little manual intervention as possible
 		+ random sequence of generic bootstrap containers
@@ -57,7 +63,24 @@ Random Landing Page Generator:
 	+ landing page = 1-2 nav slots, 1 header slot, 1-7 content slots, 1 footer slot
 		+ nav slot = 1 logo slot, 1 nav element collection, 1 cta area
 		+ header slot = 
-		
++ INTEROPERABLE INTERFACES
+	+ interface ideas
+		+ horizontal block
+		+ ~50% width and <100% height on desktop
+		+ header hero 
+			Imagery
+			+ full format 100vw 100vh
+			+ large part on the side
+			+ 
+			content compatibility
+			+ font colors only
+				+ bright
+				+ dark`
+			+ alignment
+				+ anywhere
+				+ left top
+				+ recommended content shapes (typo flow)
+					+ complementary triangle
 	
 Blackbox thinking / let's skip the collection of endless modules.
 + pretending I already have a large ass collection of sections and components, fully mapped, tagged, categorized, interfaceazzled, ...
