@@ -1,5 +1,34 @@
 ==== HEADER HERO GENERATOR ABSTRACT ===========
 
+
+
+perSide = 3
+
+for (i = 0 to perSide)
+	for (j = 0 to perSide)
+		rh = makeRandomHeader()
+		body.add(rh)
+		rh.position(i * 100vw, j * 200vh)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 99.9% MUSTs
 + Imagery: one clear imagery that you're supposed to look at
 	+ 95%: one continuous imagery
