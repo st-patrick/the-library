@@ -42,16 +42,16 @@
     }
 	
 	.partial:nth-child(1) {
-		transform: scale(0.33) translate(0, 0);
+		transform: scale(0.5) translate(0, 0);
 	}
 	.partial:nth-child(2) {
-		transform: scale(0.33) translate(100vw, 0);
+		transform: scale(0.5) translate(100vw, 0);
 	}
 	.partial:nth-child(3) {
-		transform: scale(0.33) translate(200vw, 0);
+		transform: scale(0.5) translate(0, 100vh);
 	}
 	.partial:nth-child(4) {
-		transform: scale(0.33) translate(0, 100vh);
+		transform: scale(0.5) translate(100vw, 100vh);
 	}
 	.partial:nth-child(5) {
 		transform: scale(0.33) translate(100vw, 100vh);
@@ -108,7 +108,18 @@
 
 <script>
 
-function leftRightTemplate(content) {
+const setups = {
+	'topdown': {
+		'template': topDownTemplate,
+		'width': 'wide',		
+	},
+	'leftright': {
+		'templates': [leftRightEqualTemplate, leftRightHarmonicTemplate],
+		'width': 'narrow',
+	},
+}
+
+function leftRightHarmonicTemplate(content, imageUrl) {
 	return `
 	<!--
 	LeftRight
@@ -118,7 +129,7 @@ function leftRightTemplate(content) {
 	<div class="col-4 offset-1 d-flex flex-column justify-content-center" style="height: 100vh;">
 		${content}
 	</div>
-	<div class="col-7" style="background-image: var(--bg-image);
+	<div class="col-7" style="background-image: url('${imageUrl}');
 		background-size: cover;">
 		
 	</div>
@@ -127,7 +138,25 @@ function leftRightTemplate(content) {
 	`
 };
 
-function topDownTemplate (content) {
+function leftRightEqualTemplate(content, imageUrl) {
+	return `
+	<!--
+	LeftRight
+	-->
+	<div class="container-fluid partial overflow-hidden border-3 position-absolute" style="height: 100vh;">
+	<div class="row">
+	<div class="col-5 offset-1 d-flex flex-column justify-content-center" style="height: 100vh;">
+		${content}
+	</div>
+	<div class="col-6 d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+		<img src="${imageUrl}" height="50%" />		
+	</div>
+	</div>
+	</div>
+	`
+};
+
+function topDownTemplate (content, imageUrl) {
 	return `
 	<!--
 	TopDown
@@ -137,7 +166,7 @@ function topDownTemplate (content) {
 	<div class="col-12 d-flex flex-column text-center justify-content-center align-items-center" style="height: 60vh;">
 		${content}
 	</div>
-	<div class="col-10 offset-1 imageryContainer" style="height: 50vh;">
+	<div class="col-10 offset-1 imageryContainer" style="height: 50vh; background-image: url('${imageUrl}');">
 		
 	</div>
 	</div>
@@ -146,17 +175,25 @@ function topDownTemplate (content) {
 };
 
 const layoutTemplates = [
-	leftRightTemplate,
+	leftRightHarmonicTemplate,
+	leftRightEqualTemplate,
 	topDownTemplate
 ]
 
+const imageUrls = [
+	'header-image-transformed.png',
+	'https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/16:9/w_2580%2Cc_limit/BlackForest-Germany-GettyImages-147180370.jpg',
+];
 
-const contentTemplate = (options) => `
-	<h3>really</h3>
+
+const contentTemplate = (minimal) => `
+	${minimal ? `` : `<h3>really</h3>`}
 	<h1 class="display-1 mb-4">Super fast.<br>Super free.</h1>
-	<h2>Now available</h2>
-	<p>Get in on the ground floor. Free plans available</p>
-	<button class="btn btn-lg btn-primary w-50">Get Started</button>
+	${minimal ? `` : `
+		<h2>Now available</h2>
+		<p>Get in on the ground floor. Free plans available</p>
+		<button class="btn btn-lg btn-primary w-50">Get Started</button>	
+	`}
 `;
 
 
@@ -165,24 +202,32 @@ function evaluateGeneric(vals, fn){
 }
 
 
-function randomLayout() {
-	let rid = randomInteger(layoutTemplates.length);
-	let rl = layoutTemplates[randomInteger(layoutTemplates.length)];
-	return rl;
+function randomElementOf(arr) {
+	return arr[randomInteger(arr.length)];
 }
+function randomLayout() {
+	return randomElementOf(layoutTemplates);
+}
+function randomImageUrl() {
+	return randomElementOf(imageUrls);
+}
+
 
 function randomInteger(max){
 	return Math.floor(Math.random() * max);
 }
+function randomBool() {
+	return Math.random() < 0.5;
+}
 
 
 
-const perSide = 3;
+const perSide = 2;
 const frameDOM = document.getElementById("theFrame");
 
 for (let i = 0; i < perSide; i++) {
 	for (let j = 0; j < perSide; j++) {
-		rh = randomLayout()(contentTemplate);
+		rh = randomLayout()(contentTemplate(randomBool()), randomImageUrl());
 		frameDOM.innerHTML += rh;
 		//rh.position(i * 100vw, j * 200vh)
 	}

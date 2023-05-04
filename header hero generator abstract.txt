@@ -10,7 +10,7 @@ for (i = 0 to perSide)
 		body.add(rh)
 		rh.position(i * 100vw, j * 200vh)
 
-
+this is getting super complex very quickly, especially manually
 
 
 
