@@ -1,0 +1,39 @@
+==== HEADER HERO GENERATOR ABSTRACT ===========
+
+99.9% MUSTs
++ Imagery: one clear imagery that you're supposed to look at
+	+ 95%: one continuous imagery
+	+ 90%: mockup / video mockup
+		+ actual mockup
+		+ fake mockup with some elements faded out or made to look smoother than in reality
+	+ 50% layered mockups
+	+ 20% background full format imagery with more prominent imagery on top of it
+	+ 10% geometric shapes to interact with imagery
+		+ as a mask for imagery
+		+ behind the imagery as additional color	
+	+ 5%: split imagery or spread out, lots of smaller images		
+	+ 2% Imagery overlapping, interacting with Heading (AirPods 3rd gen)
++ Heading
+	+ one clear heading that's bigger than any other text visible and with a simple, coherent message in a few words or 1-2 sentences.
+	+ text as mask for gradient or other imagery
+	+ the main heading being animated in some way
+	+ have the main heading at the very bottom
++ navigation already visible
++ (beautiful) exceptions to the rule:
+	+ have text included in Imagery (iPad Air, iPad Mini)
+	+ have Imagery ONLY (iPhone SE landing page,)
+	+ have two main headings + https://www.angellist.com/
+
+xtremely common
++ CTA / other action item (email signup)
++ sub-heading
+
+
+common
++ immediate "teaser" to the next section which is cut off but just visible enough to spark interest (compatible with: main Imagery)
+	+ asymmetric ouverture to next section (wobbly line, ..)
++ logos
++ third layer of sub-heading or lead paragraph
+	+ testimonial
++ being full format, 100vw and 100vh or 100vh minus navigation
++ some smaller icons / logos / images surrounding main heading
