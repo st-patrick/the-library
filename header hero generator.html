@@ -8,10 +8,40 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 	<style>
+	:root {
+		--brand-primary: purple;
+	}
+	.btn-primary {
+		background-color: var(--brand-primary);
+		border-color: var(--brand-primary);
+	}
+	
+	
 	.display-1 {
 		font-weight: bold;
 		font-size: 7rem;
 		line-height: 0.95;
+	}
+	
+    .partial {
+		transform-origin: 0 0;
+        transform: scale(0.5);
+    }
+	
+	.partial-1 {
+		transform: scale(0.5) translate(0, 0);
+	}
+	.partial-2 {
+		transform-origin: 0 0;
+		transform: scale(0.5) translate(100vw, 0);
+	}
+	.partial-3 {
+		transform-origin: 0 0;
+		transform: scale(0.5) translate(0, 100vh);
+	}
+	.partial-4 {
+		transform-origin: 0 0;
+		transform: scale(0.5) translate(100vw, 100vh);
 	}
 	</style>
 	
@@ -30,8 +60,8 @@ TopDown
 		CTA
 	other
 		large image = teaser
-
-<div class="container-fluid">
+-->
+<div class="container-fluid partial overflow-hidden  border border-3 position-absolute" style="height: 100vh;">
 <div class="row">
 <div class="col-12 d-flex flex-column text-center justify-content-center align-items-center" style="height: 60vh;">
 	<h3>really</h3>
@@ -48,7 +78,7 @@ TopDown
 </div>
 </div>
 </div>
--->
+
 
 
 <!--
@@ -62,12 +92,37 @@ LeftRight
 	other
 		full format image
 -->
-<div class="container-fluid">
+<div class="container-fluid partial partial-2 overflow-hidden  border border-3 position-absolute" style="height: 100vh;">
+<div class="row">
+<div class="col-4 offset-1 d-flex flex-column justify-content-center" style="height: 100vh;">
+	<h1 class="display-1">Super fast.<br>Super free.</h1>
+	<h2>Now available</h2>
+	<button class="btn btn-lg btn-primary w-50">Get Started</button>
+</div>
+<div class="col-7" style="background-image: url('header-image-transformed.png');
+	background-size: cover;">
+	
+</div>
+</div>
+</div>
+
+
+<!--
+LeftRight
+	one
+		h3
+		h1
+		h2
+		p
+		CTA
+	other
+		full format image
+-->
+<div class="container-fluid partial partial-3 overflow-hidden  border border-3 position-absolute" style="height: 100vh;">
 <div class="row">
 <div class="col-4 offset-1 d-flex flex-column justify-content-center" style="height: 100vh;">
 	<h3>really</h3>
-	<h1 class="display-1">Super fast.<br>
-		Super free.</h1>
+	<h1 class="display-1">Super fast.<br>Super free.</h1>
 	<h2>Now available</h2>
 	<p>Get in on the ground floor. Free plans available</p>
 	<button class="btn btn-lg btn-primary w-50">Get Started</button>
@@ -78,6 +133,47 @@ LeftRight
 </div>
 </div>
 </div>
+
+
+
+
+<!--
+TopDown
+	one
+		h3
+		h1
+		h2
+		p
+		CTA
+	other
+		large image = teaser
+-->
+<div class="container-fluid partial-4 overflow-hidden border border-3 position-absolute" style="height: 100vh;">
+<div class="row">
+<div class="col-12 d-flex flex-column text-center justify-content-center align-items-center" style="height: 60vh;">
+	<h1 class="display-1">Super fast.<br>
+		Super free.</h1>
+	<h2>Now available</h2>
+	<button class="btn btn-lg btn-primary w-25">Get Started</button>
+</div>
+<div class="col-10 offset-1" style="background-image: url('header-image-transformed.png');
+	background-size: cover;
+	height: 50vh;">
+	
+</div>
+</div>
+</div>
+
+
+
+<!--
+	<h3>really</h3>
+	<h1 class="display-1">Super fast.<br>
+		Super free.</h1>
+	<h2>Now available</h2>
+	<p>Get in on the ground floor. Free plans available</p>
+	<button class="btn btn-lg btn-primary w-50">Get Started</button
+	-->
 
 
 
@@ -88,8 +184,10 @@ LeftRight
 
 <script>
 
+const countPerSide = 2;
 
-var template = `
+let content = `<h1 class="display-1">Super fast.<br>Super free.</h1>`; // this will include all the "texty" stuff like headings, buttons, ...
+const template = (content) => `
 <!--
 LeftRight
 	one
@@ -101,15 +199,10 @@ LeftRight
 	other
 		full format image
 -->
-<div class="container-fluid">
+<div class="container-fluid partial overflow-hidden border-3" height="100vh;">
 <div class="row">
 <div class="col-4 offset-1 d-flex flex-column justify-content-center" style="height: 100vh;">
-	<h3>really</h3>
-	<h1 class="display-1">Super fast.<br>
-		Super free.</h1>
-	<h2>Now available</h2>
-	<p>Get in on the ground floor. Free plans available</p>
-	<button class="btn btn-lg btn-primary w-50">Get Started</button>
+	${content}
 </div>
 <div class="col-7" style="background-image: url('header-image-transformed.png');
 	background-size: cover;">
@@ -119,7 +212,12 @@ LeftRight
 </div>
 `;
 
-document.body.innerHTML = template;
+
+
+
+
+//document.body.innerHTML = template(content);
+
 
 
 
