@@ -108,41 +108,47 @@
 
 <script>
 
-const countPerSide = 2;
+function leftRightTemplate(content) {
+	return `
+	<!--
+	LeftRight
+	-->
+	<div class="container-fluid partial overflow-hidden border-3 position-absolute" height="100vh;">
+	<div class="row">
+	<div class="col-4 offset-1 d-flex flex-column justify-content-center" style="height: 100vh;">
+		${content}
+	</div>
+	<div class="col-7" style="background-image: var(--bg-image);
+		background-size: cover;">
+		
+	</div>
+	</div>
+	</div>
+	`
+};
 
-let content = `<h1 class="display-1">Super fast.<br>Super free.</h1>`; // this will include all the "texty" stuff like headings, buttons, ...
-const layoutTemplates = [`
-<!--
-LeftRight
--->
-<div class="container-fluid partial overflow-hidden border-3 position-absolute" height="100vh;">
-<div class="row">
-<div class="col-4 offset-1 d-flex flex-column justify-content-center" style="height: 100vh;">
-	${content}
-</div>
-<div class="col-7" style="background-image: var(--bg-image);
-	background-size: cover;">
-	
-</div>
-</div>
-</div>
-`,
-`
-<!--
-TopDown
--->
-<div class="container-fluid partial overflow-hidden border border-3 position-absolute" style="height: 100vh;">
-<div class="row">
-<div class="col-12 d-flex flex-column text-center justify-content-center align-items-center" style="height: 60vh;">
-	${content}
-</div>
-<div class="col-10 offset-1 imageryContainer" style="height: 50vh;">
-	
-</div>
-</div>
-</div>
-`,
-];
+function topDownTemplate (content) {
+	return `
+	<!--
+	TopDown
+	-->
+	<div class="container-fluid partial overflow-hidden border border-3 position-absolute" style="height: 100vh;">
+	<div class="row">
+	<div class="col-12 d-flex flex-column text-center justify-content-center align-items-center" style="height: 60vh;">
+		${content}
+	</div>
+	<div class="col-10 offset-1 imageryContainer" style="height: 50vh;">
+		
+	</div>
+	</div>
+	</div>
+	`
+};
+
+const layoutTemplates = [
+	leftRightTemplate,
+	topDownTemplate
+]
 
 
 const contentTemplate = (options) => `
@@ -161,9 +167,7 @@ function evaluateGeneric(vals, fn){
 
 function randomLayout() {
 	let rid = randomInteger(layoutTemplates.length);
-	console.log(rid);
 	let rl = layoutTemplates[randomInteger(layoutTemplates.length)];
-	console.log(rl);
 	return rl;
 }
 
@@ -178,7 +182,7 @@ const frameDOM = document.getElementById("theFrame");
 
 for (let i = 0; i < perSide; i++) {
 	for (let j = 0; j < perSide; j++) {
-		rh = randomLayout(contentTemplate);
+		rh = randomLayout()(contentTemplate);
 		frameDOM.innerHTML += rh;
 		//rh.position(i * 100vw, j * 200vh)
 	}
