@@ -13,10 +13,17 @@ for (i = 0 to perSide)
 this is getting super complex very quickly, especially manually
 
 
+next steps ish:
++ use image API to get random images for a certain theme
++ get a "like" button to save configs
++ use chatGPT to create random headings and so on...
++ if you edit one content, sync it to the rest. Some sort of listener "onchange"
++ better to have everything inline styles, so the "configs" can just be copied from the HTML element
++ have some mockups you can dynamically populate with an iframe
 
 
-
-
+maaybe:
++ mockups that you can just fill in with an iframe or an uploaded photo
 
 
 
