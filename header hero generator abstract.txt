@@ -14,6 +14,7 @@ this is getting super complex very quickly, especially manually
 
 
 next steps ish:
++ remove position-absolute when "exporting" bc it will break sites
 + use image API to get random images for a certain theme
 + get a "like" button to save configs
 + use chatGPT to create random headings and so on...
